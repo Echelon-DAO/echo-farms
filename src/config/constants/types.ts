@@ -50,6 +50,7 @@ export interface FarmConfig {
   multiplier?: string
   isTokenOnly?: boolean
   isCommunity?: boolean
+  platfrom?: string
   risk: number
   dual?: {
     rewardPerBlock: number

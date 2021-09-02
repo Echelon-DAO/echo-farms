@@ -133,6 +133,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
         multiplier={farm.multiplier}
         risk={risk}
         depositFee={farm.depositFeeBP}
+        platfrom={farm.platfrom}
         farmImage={farmImage}
         tokenSymbol={farm.tokenSymbol}
       />

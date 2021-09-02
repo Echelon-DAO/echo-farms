@@ -117,13 +117,16 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
           </Heading>
         )}
         <FarmTabButtons stakedOnly={stakedOnly} setStakedOnly={setStakedOnly} />
+        
         <div style={{ marginTop: '30px' }}>
           <Divider />
+
           <FlexLayout>
+            
             <Route exact path={`${path}`}>
-              {stakedOnly ? farmsList(stakedOnlyFarms, false) : farmsList(activeFarms, false)}
               {tokenMode?<Coming />:null}
-              
+              {stakedOnly ? farmsList(stakedOnlyFarms, false) : farmsList(activeFarms, false)}
+
             </Route>
             <Route exact path={`${path}/history`}>
               {farmsList(inactiveFarms, true)}

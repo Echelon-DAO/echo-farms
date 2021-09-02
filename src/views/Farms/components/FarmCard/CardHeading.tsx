@@ -10,6 +10,7 @@ export interface ExpandableSectionProps {
   depositFee?: number
   farmImage?: string
   tokenSymbol?: string
+  platfrom?:string
 }
 
 const Wrapper = styled(Flex)`
@@ -26,6 +27,7 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
   lpLabel,
   multiplier,
   risk,
+  platfrom,
   farmImage,
   tokenSymbol,
   depositFee,
@@ -43,8 +45,21 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
             {' '}
             <span >{multiplier}</span>
           </MultiplierTag>
+
+          
         </Flex>
+     
+
+        <Flex justifyContent="center" style={{marginTop:10}}>
+        {platfrom? <Tag variant='secondary'>
+        
+        <span >{platfrom}</span>
+      </Tag>:null}
+        </Flex>
+        
       </Flex>
+    
+   
     </Wrapper>
   )
 }
